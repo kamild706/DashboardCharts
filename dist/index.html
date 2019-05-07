@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://yarnpkg.com/en/package/normalize.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+    <title>Aplikacja</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <aside>
+      <div class="header">
+        <span>Dashboard</span>
+      </div>
+      <div>
+        <ul class="navigation">
+          <li class="selected"><a href="#polish_population">Trend populacji Polski</a></li>
+          <li><a href="#currency_distribution">Rozkład ilościowy walut</a></li>
+          <li><a href="#countries_and_euro_currency">Państwa na świecie</a></li>
+          <li><a href="#multi_countries_population">Trend populacji wybranych państw</a></li>
+          <li><a href="#minmax_population">Populacja państw europejskich</a></li>
+          <li><a href="#south_american_cities">Liczba miast w Ameryce Południowej</a></li>
+          <li><a href="#worldmap">Mapa świata</a></li>
+        </ul>
+      </div>
+    </aside>
+    <main>
+      <div class="card">
+        <canvas id="polish_population"></canvas>
+      </div>
+      <div class="card">
+        <canvas id="currency_distribution"></canvas>
+      </div>
+      <div class="card extra-padding" id="countries_and_euro_currency">
+        <table>
+          <tr>
+            <th>Liczba państw na świecie:</th>
+            <td id="number_of_countries"></td>
+          </tr>
+          <tr>
+            <th>Liczba państw używających waluty Euro:</th>
+            <td id="eurozone_countries"></td>
+          </tr>
+        </table>
+      </div>
+      <div class="card">
+        <canvas id="multi_countries_population"></canvas>
+      </div>
+      <div class="card">
+        <canvas id="minmax_population"></canvas>
+      </div>
+      <div class="card">
+        <canvas id="south_american_cities"></canvas>
+      </div>
+      <div class="card">
+        <div id="worldmap"></div>
+      </div>
+    </main>
+
+    <script src="main.bundle.js"></script>
+    <script src="navigation.bundle.js"></script>
+  </body>
+</html>
